@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/touroku.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>一味くん</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="ichimi.php">
+          <img src="img/icon_red_pepper.svg" width="50" height="30" class="d-inline-block align-top" alt="">
+          一味くん
+        </a>
+        <button class="d-flex btn btn-outline-danger all_delete" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" >全削除する</button>
+        <!-- <button class="d-flex btn btn-outline-danger modal-open" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">登録する</button> -->
+      </div>
+    </nav>
+</header>
+
+    <main>
+
+    <!-- 入力フォーム -->
+    <!-- 画像（ドロップするやつ）、名前、種類、容器、容量、辛さ評価（☆5つ）、レビュー -->
+    <div>
+      <h1 class="mt-5 ms-5 text-danger">どれだけ辛いか教えてくれないか？</h1>
+      <div class="container">
+        <!-- PHPに飛ばすためのform -->
+        <form method="post" action="touroku_data.php" class="row mt-5 col-lg-8 form">
+          <div class="col-md-4">
+            <label for="inputEmail4" class="form-label">名前</label>
+            <!-- PHPに飛ばすnameデータ(name) -->
+            <input name="name" type="text" class="form-control" id="touroku_name">
+          </div>
+          <div class="col-md-3">
+            <label for="inputZip" class="form-label">評価</label>
+            <!-- PHPに飛ばすevalデータ(nameとvalue) -->
+            <select name="eval" id="inputState" class="form-select" id="touroku_hyoka">
+              <option selected>選択...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">容器</label>
+            <!-- PHPに飛ばすcontainerデータ(nameとvalue) -->
+            <select name="container" id="inputState" class="form-select" id="touroku_youki">
+              <option selected>選択...</option>
+              <option value="瓶">瓶</option>
+              <option value="個包装">個包装</option>
+              <option value="袋">袋</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="col-md-4 mt-3">
+            <label for="inputCity" class="form-label">販売元</label>
+            <!-- PHPに飛ばすsellerデータ(name) -->
+            <input name="seller" type="text" class="form-control" id="touroku_hanbai">
+          </div>
+          <div class="col-md-4 mt-3">
+            <label for="inputCity" class="form-label">容量</label>
+            <!-- PHPに飛ばすquantityデータ(name) -->
+            <input name="quantity" type="text" class="form-control" id="touroku_ryou">
+          </div>
+          <div class="col-11 mt-3">
+            <label for="inputAddress" class="form-label">レビュー</label>
+            <!-- PHPに飛ばすreviewデータ(name) -->
+            <input name="review" type="text" class="form-control" id="touroku_review" placeholder="辛いかい？感想を教えてくれよ！">
+          </div>
+          <div class="col-11 mt-5">
+            <button type="submit" class="btn btn-outline-danger" id="touroku">
+              登録
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    </main>
+    <footer class="bg-danger text-center text-light p-3 mt-5 fixed-bottom">
+      © 2022 Gino Inc All rights reserved.
+    </footer>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

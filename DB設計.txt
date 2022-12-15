@@ -1,0 +1,10 @@
+DB名　　：ichimi_db
+Table名 ：ichimi_data_table
+項目名　：
+1.id（int12,PrimaryKey,Autoincrement）
+2.name（varcher64）
+3.eval(int12)
+4.container(varcher64)
+5.seller(varcher64)
+6.quantity(varcher64)
+7.review(text)

@@ -1,0 +1,26 @@
+/* バックグラウンド */
+.index_bg_img{
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%; 
+    height: 100vh;
+}
+
+.index_bg_img::before{
+    content: '';
+    display: block;
+}
+
+.title{
+    font-size: 96px;
+    text-align: center;
+    padding-top: 200px;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+    color: white;
+    /* background-color: red; */
+    background: linear-gradient(transparent 95%, #ff0303b0 20%);
+    font-family: "ヒラギノ角ゴシック";
+}
+
